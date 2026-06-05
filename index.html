@@ -306,6 +306,47 @@ footer{
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
 
+/* â”€â”€ HAMBURGER â”€â”€ */
+.nav-hamburger{
+  display:none;flex-direction:column;justify-content:center;gap:5px;
+  width:36px;height:36px;background:none;border:1px solid var(--border);
+  cursor:pointer;padding:7px;transition:border-color .2s;
+}
+.nav-hamburger:hover{border-color:var(--accent);}
+.nav-hamburger span{
+  display:block;width:100%;height:1.5px;background:var(--text);
+  transition:transform .3s,opacity .3s,background .2s;transform-origin:center;
+}
+.nav-hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);background:var(--accent);}
+.nav-hamburger.open span:nth-child(2){opacity:0;}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);background:var(--accent);}
+
+/* â”€â”€ MOBILE DRAWER â”€â”€ */
+.mobile-drawer{
+  display:none;position:fixed;top:56px;left:0;right:0;z-index:99;
+  background:rgba(7,12,20,.98);border-bottom:1px solid var(--border);
+  backdrop-filter:blur(16px);
+  flex-direction:column;padding:0;
+  transform:translateY(-8px);opacity:0;
+  transition:transform .25s ease,opacity .25s ease;
+  pointer-events:none;
+}
+.mobile-drawer.open{
+  display:flex;transform:translateY(0);opacity:1;pointer-events:all;
+}
+.mobile-drawer a{
+  font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--text-dim);text-decoration:none;padding:18px 28px;
+  border-bottom:1px solid var(--border);transition:color .2s,background .2s;
+}
+.mobile-drawer a:hover{color:var(--accent);background:rgba(0,212,255,.04);}
+.mobile-drawer a:last-child{border-bottom:none;}
+.drawer-cta{
+  margin:16px 28px 20px;padding:14px;background:var(--accent);color:var(--bg) !important;
+  font-weight:700 !important;text-align:center;
+}
+.drawer-cta:hover{background:var(--accent2) !important;color:var(--bg) !important;}
+
 /* â”€â”€ RESPONSIVE â”€â”€ */
 @media(max-width:900px){
   .hero-inner{grid-template-columns:1fr;}
@@ -315,10 +356,13 @@ footer{
   .exp-left{border-right:none;border-bottom:1px solid var(--border);}
   .contact-grid{grid-template-columns:1fr;}
   nav .nav-links{display:none;}
+  nav .nav-cta{display:none;}
+  .nav-hamburger{display:flex;}
 }
 @media(max-width:600px){
   section,nav,footer{padding-left:20px;padding-right:20px;}
   .hero-title{font-size:2rem;}
+  .hero-stats{flex-wrap:wrap;gap:20px;}
 }
 </style>
 </head>
@@ -335,7 +379,20 @@ footer{
     <a href="#contact">Contact</a>
   </div>
   <a class="nav-cta" href="Senthil_Kumar_C_Resume_Final.pdf" download>Resume â†“</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- â”€â”€ MOBILE DRAWER â”€â”€ -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+  <a class="drawer-cta" href="Senthil_Kumar_C_Resume_Final.pdf" download>Download Resume â†“</a>
+</div>
 
 <!-- â”€â”€ HERO â”€â”€ -->
 <section id="about">
@@ -398,39 +455,4 @@ footer{
         </line>
 
         <!-- SSIS ETL center -->
-        <rect x="192" y="110" width="140" height="80" rx="3" fill="#0a1a28" stroke="#00d4ff" stroke-width="1.5"/>
-        <text x="262" y="138" text-anchor="middle" class="pipe-label" font-weight="700" fill="#00d4ff">SSIS ETL</text>
-        <text x="262" y="155" text-anchor="middle" class="pipe-label-sm">Extract Â· Transform</text>
-        <text x="262" y="170" text-anchor="middle" class="pipe-label-sm">Load Pipeline</text>
-        <!-- moving dots inside SSIS -->
-        <circle cx="210" cy="150" r="3" fill="#00ff9f" opacity=".7">
-          <animate attributeName="cx" values="210;330;210" dur="1.8s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values=".7;1;.7" dur="1.8s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="220" cy="155" r="2" fill="#00d4ff" opacity=".5">
-          <animate attributeName="cx" values="220;320;220" dur="2.1s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="215" cy="145" r="2" fill="#ff6b35" opacity=".5">
-          <animate attributeName="cx" values="215;325;215" dur="2.4s" repeatCount="indefinite"/>
-        </circle>
-
-        <!-- Arrow right from SSIS to SQL Server -->
-        <line x1="332" y1="150" x2="370" y2="150" stroke="#00d4ff" stroke-width="1.5" marker-end="url(#arr-a)" stroke-dasharray="4 3">
-          <animate attributeName="stroke-dashoffset" from="14" to="0" dur=".6s" repeatCount="indefinite"/>
-        </line>
-
-        <!-- SQL Server -->
-        <rect x="372" y="122" width="68" height="56" rx="3" class="pipe-node-active"/>
-        <text x="406" y="145" text-anchor="middle" class="pipe-label" font-weight="600" fill="#00ff9f">SQL</text>
-        <text x="406" y="158" text-anchor="middle" class="pipe-label" font-weight="600" fill="#00ff9f">Server</text>
-        <text x="406" y="172" text-anchor="middle" class="pipe-label-sm">Target</text>
-
-        <!-- Arrow down from SQL Server -->
-        <line x1="406" y1="178" x2="406" y2="220" stroke="#00ff9f" stroke-width="1.5" marker-end="url(#arr-a)" stroke-dasharray="4 3">
-          <animate attributeName="stroke-dashoffset" from="14" to="0" dur=".6s" repeatCount="indefinite"/>
-        </line>
-
-        <!-- Reporting layer -->
-        <rect x="192" y="222" width="80" height="50" rx="3" class="pipe-node"/>
-        <text x="232" y="244" text-anchor="middle" class="pipe-label" fill="#ff6b35">SSRS</text>
-        <text x="232" y="260" text-anchor="middle" class="pipe-labe
+        <rect x="192" y="110" width="140"
