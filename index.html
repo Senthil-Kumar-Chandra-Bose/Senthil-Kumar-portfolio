@@ -3,334 +3,435 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Portfolio of Senthil Kumar C - Senior Software Engineer specializing in Data Migration, ETL, SQL optimization and BI reporting." />
-  <title>Senthil Kumar C | Portfolio</title>
+  <meta name="description" content="Portfolio of Senthil Kumar C — Senior Software Engineer specializing in data migration, ETL pipelines, SQL optimization and BI reporting." />
+  <title>Senthil Kumar C — Data Migration & BI Portfolio</title>
 
-  <!-- Inline CSS: Combined modern theme, responsive, cards, animations -->
+  <!-- Modern professional theme + animations -->
   <style>
-    /* Reset & Base */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    /* Reset & base */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-      background: #f4f6f9;
-      color: #222;
-      line-height: 1.6;
+      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+      background: linear-gradient(180deg,#f6f8fb 0%, #ffffff 60%);
+      color: #0f1724;
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
+      line-height: 1.5;
     }
+
+    /* Layout container */
+    .wrap { max-width: 1100px; margin: 28px auto; padding: 0 18px; }
 
     /* Header / Hero */
-    header {
-      background: linear-gradient(135deg,#004080,#0066cc);
+    header.hero {
+      background: linear-gradient(135deg,#0b4a7a 0%, #0f6fb0 60%);
       color: #fff;
-      padding: 56px 20px;
-      text-align: center;
+      border-radius: 14px;
+      padding: 36px 22px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(11,74,122,0.18);
     }
-    header .container { max-width:1100px; margin:auto; }
-    header h1 { font-size:2.6rem; margin-bottom:8px; letter-spacing:0.5px; }
-    header p.lead { font-size:1.05rem; opacity:0.95; margin-bottom:14px; }
-    .contact-links { margin-top:12px; font-size:0.95rem; }
-    .contact-links a { color:#ffdd57; text-decoration:none; margin:0 8px; font-weight:600; }
-    .contact-links a:hover { text-decoration:underline; }
-
-    /* Menu toggle for mobile */
-    .menu-toggle { display:none; background:#004080; color:#fff; border:none; padding:10px 14px; border-radius:6px; cursor:pointer; font-size:1rem; margin:12px auto; }
-
-    /* Navigation */
-    nav {
-      background:#222;
-      padding:12px 10px;
-      text-align:center;
-      position:sticky;
-      top:0;
-      z-index:999;
-    }
-    nav a {
-      color:#fff; margin:0 16px; text-decoration:none; font-weight:600; display:inline-block;
-    }
-    nav a:hover { color:#ffcc00; }
-
-    /* Main sections */
-    main { max-width:1100px; margin:30px auto; padding:0 18px; }
-    section { padding:48px 0; }
-    section h2 {
-      font-size:1.6rem; color:#004080; margin-bottom:14px; display:inline-block; border-bottom:2px solid #004080; padding-bottom:6px;
-    }
-    section p.lead { margin-top:10px; color:#444; }
-
-    /* Cards & grids */
-    .grid {
-      display:grid;
-      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-      gap:22px;
-      margin-top:20px;
-    }
-    .card {
-      background:#fff; border-radius:10px; padding:18px; box-shadow:0 6px 18px rgba(0,0,0,0.08);
-      transition:transform .28s ease, box-shadow .28s ease;
-    }
-    .card:hover { transform:translateY(-6px); box-shadow:0 10px 26px rgba(0,0,0,0.12); }
-
-    /* Experience list style */
-    .experience-item { margin-bottom:14px; }
-    .experience-item strong { display:block; color:#004080; margin-bottom:6px; }
-
-    /* Project cards */
-    .project-card { text-align:center; padding-bottom:12px; }
-    .project-card img { width:100%; height:170px; object-fit:cover; border-radius:8px; margin-bottom:12px; background:#e9eef6; }
-    .project-card h3 { color:#004080; margin-bottom:8px; }
-    .project-card p { color:#444; font-size:0.95rem; margin-bottom:12px; }
-
-    /* Buttons */
+    .hero-grid { display: grid; grid-template-columns: 1fr 420px; gap: 24px; align-items: center; max-width:1100px; margin:auto; }
+    .hero-title { font-size: clamp(1.4rem, 2.6vw, 2.4rem); line-height:1.05; margin-bottom:10px; font-weight:700; letter-spacing:0.2px; }
+    .hero-sub { font-size:1rem; opacity:0.95; margin-bottom:18px; }
+    .hero-cta { display:flex; gap:12px; flex-wrap:wrap; }
     .btn {
-      display:inline-block; padding:10px 18px; border-radius:8px; text-decoration:none; font-weight:700;
-      background:#004080; color:#fff; transition:background .22s ease;
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 16px; border-radius:10px; text-decoration:none; font-weight:700;
+      background:#ffd54a; color:#08324a; border: none; cursor:pointer;
+      box-shadow: 0 6px 18px rgba(3,30,45,0.08);
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
     }
-    .btn.secondary { background:#ffcc00; color:#004080; }
-    .btn:hover { background:#0066cc; color:#fff; }
-    .btn.secondary:hover { background:#ffd633; }
+    .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 26px rgba(3,30,45,0.12); }
+    .btn.primary { background: #00a3ff; color: #fff; }
+    .contact-links { margin-top:10px; font-size:0.95rem; display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
 
-    /* Resume download */
-    .resume-download { text-align:center; margin-top:18px; }
+    /* Decorative SVG / illustration container */
+    .hero-visual {
+      display:flex; justify-content:center; align-items:center;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      border-radius: 12px; padding:18px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+    }
+
+    /* Navigation (sticky) */
+    nav {
+      margin-top: 18px;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 10px 14px;
+      display:flex; gap:12px; justify-content:center; align-items:center;
+      box-shadow: 0 6px 18px rgba(12,20,30,0.06);
+      position: sticky; top: 18px; z-index: 60;
+    }
+    nav a { color:#0f1724; text-decoration:none; font-weight:600; padding:8px 12px; border-radius:8px; }
+    nav a:hover { background: rgba(3,30,45,0.04); color:#08324a; }
+
+    /* Sections */
+    section { padding: 36px 0; }
+    h2 { color:#08324a; font-size:1.15rem; margin-bottom:12px; display:inline-block; border-bottom:3px solid rgba(0,115,190,0.08); padding-bottom:6px; }
+    p.lead { color:#334155; margin-top:8px; }
+
+    /* Grid & cards */
+    .grid { display:grid; gap:18px; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); margin-top:18px; }
+    .card {
+      background: #fff; border-radius:12px; padding:18px;
+      box-shadow: 0 8px 22px rgba(12,20,30,0.06);
+      transition: transform .22s ease, box-shadow .22s ease;
+    }
+    .card:hover { transform: translateY(-6px); box-shadow: 0 14px 36px rgba(12,20,30,0.09); }
+    .muted { color:#64748b; font-size:0.95rem; }
+
+    /* Project card specifics */
+    .project-thumb {
+      width:100%; height:160px; border-radius:8px; object-fit:cover; background:linear-gradient(180deg,#e6f0fb,#f8fbff);
+      display:block; margin-bottom:12px; border:1px solid rgba(3,30,45,0.03);
+    }
+    .project-title { color:#0b4a7a; font-weight:700; margin-bottom:6px; }
+    .project-desc { color:#334155; font-size:0.95rem; margin-bottom:12px; }
 
     /* Contact form */
-    form { max-width:700px; margin:18px auto 0; background:#fff; padding:18px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.06); }
-    label { display:block; font-weight:600; margin-top:8px; color:#333; }
+    form.contact-form { max-width:720px; margin-top:12px; }
+    .form-row { display:grid; grid-template-columns: 1fr 1fr; gap:12px; }
+    .form-row.single { grid-template-columns: 1fr; }
     input[type="text"], input[type="email"], textarea {
-      width:100%; padding:10px; margin-top:6px; border:1px solid #d0d6dd; border-radius:6px; font-size:0.95rem;
+      width:100%; padding:10px 12px; border-radius:8px; border:1px solid #e2e8f0; font-size:0.95rem;
+      background:#fff;
     }
-    textarea { resize:vertical; min-height:120px; }
-    form button { margin-top:12px; }
+    textarea { min-height:140px; resize:vertical; }
+    .form-actions { margin-top:12px; display:flex; gap:12px; flex-wrap:wrap; }
 
     /* Footer */
-    footer { background:#004080; color:#fff; text-align:center; padding:18px 10px; margin-top:36px; }
+    footer { margin-top:28px; padding:18px; text-align:center; color:#475569; font-size:0.95rem; }
 
-    /* Animations */
-    .fade-in, .slide-up { opacity:0; transform:translateY(20px); transition:opacity 0.9s ease, transform 0.9s ease; }
-    .slide-up { transform:translateY(40px); }
-    .visible { opacity:1; transform:translateY(0); }
+    /* Animations: subtle entrance */
+    .fade { opacity:0; transform: translateY(18px); transition: opacity .9s ease, transform .9s ease; }
+    .fade.visible { opacity:1; transform: translateY(0); }
 
-    /* Responsive adjustments */
-    @media (max-width: 900px) {
-      header h1 { font-size:2rem; }
-      header p.lead { font-size:1rem; }
+    /* Small screens */
+    @media (max-width: 880px) {
+      .hero-grid { grid-template-columns: 1fr; gap:18px; }
+      nav { position: static; margin-top: 14px; }
+      .form-row { grid-template-columns: 1fr; }
     }
-    @media (max-width: 768px) {
-      .menu-toggle { display:block; }
-      nav { display:none; }
-      nav.active { display:flex; flex-direction:column; gap:8px; padding:12px; }
-      nav a { margin:8px 0; }
-      .project-card img { height:160px; }
-      .card { padding:14px; }
+
+    /* Data-migration themed micro-animations */
+    .dot {
+      width:8px; height:8px; border-radius:50%; background:#ffd54a; display:inline-block; margin-right:6px;
+      animation: pulse 1.6s infinite ease-in-out;
     }
+    .dot:nth-child(2) { animation-delay: .2s; background:#00a3ff; }
+    .dot:nth-child(3) { animation-delay: .4s; background:#00c2a8; }
+
+    @keyframes pulse {
+      0% { transform: scale(.9); opacity:.8; }
+      50% { transform: scale(1.25); opacity:1; }
+      100% { transform: scale(.9); opacity:.8; }
+    }
+
+    /* small utility */
+    .small { font-size:0.92rem; color:#475569; }
   </style>
 </head>
 <body>
-  <!-- Header / Hero -->
-  <header>
-    <div class="container">
-      <h1>Senthil Kumar C</h1>
-      <p class="lead">Senior Software Engineer | Data Migration Specialist | Database Engineer</p>
+  <header class="hero wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-title">Senthil Kumar C</div>
+        <div class="hero-sub">Senior Software Engineer — Data Migration, ETL Automation & BI Reporting</div>
 
-      <div class="contact-links" aria-label="Contact links">
-        <a href="mailto:senthilcsk03@gmail.com">senthilcsk03@gmail.com</a>
-        <a href="tel:+919789295013">+91-9789295013</a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+        <div class="hero-cta">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="Senthil_Kumar_C_Resume_Final.pdf" download>Download Resume</a>
+        </div>
+
+        <div class="contact-links small" style="margin-top:14px;">
+          <span class="muted">Email:</span>
+          <a href="mailto:senthilcsk03@gmail.com" style="color:#ffd54a; font-weight:700;">senthilcsk03@gmail.com</a>
+          <span class="muted">•</span>
+          <span class="muted">Phone:</span>
+          <a href="tel:+919789295013" style="color:#ffd54a; font-weight:700;">+91-9789295013</a>
+        </div>
+
+        <div style="margin-top:14px;">
+          <span class="dot" aria-hidden="true"></span>
+          <span class="dot" aria-hidden="true"></span>
+          <span class="dot" aria-hidden="true"></span>
+          <span class="muted" style="margin-left:8px;">Specialized in zero-loss migrations, SSIS automation, RDLC & Power BI reporting</span>
+        </div>
       </div>
 
-      <div class="resume-download">
-        <a class="btn secondary" href="Senthil_Kumar_C_Resume_Final.pdf" download>Download Resume</a>
+      <div class="hero-visual" aria-hidden="true">
+        <!-- Inline SVG illustration: stylized servers, arrows, and data flow -->
+        <svg width="380" height="220" viewBox="0 0 380 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Data migration illustration">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1">
+              <stop offset="0" stop-color="#00a3ff"/>
+              <stop offset="1" stop-color="#00c2a8"/>
+            </linearGradient>
+            <filter id="f1" x="-20%" y="-20%" width="140%" height="140%">
+              <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#08324a" flood-opacity="0.12"/>
+            </filter>
+          </defs>
+
+          <!-- left server -->
+          <g filter="url(#f1)">
+            <rect x="18" y="28" width="110" height="64" rx="8" fill="#fff" stroke="#e6f0fb"/>
+            <rect x="28" y="40" width="90" height="12" rx="4" fill="url(#g1)"/>
+            <rect x="28" y="58" width="60" height="8" rx="4" fill="#e6f0fb"/>
+            <rect x="28" y="70" width="40" height="6" rx="3" fill="#f1f7fb"/>
+          </g>
+
+          <!-- right server -->
+          <g filter="url(#f1)">
+            <rect x="252" y="28" width="110" height="64" rx="8" fill="#fff" stroke="#e6f0fb"/>
+            <rect x="262" y="40" width="90" height="12" rx="4" fill="#00a3ff"/>
+            <rect x="262" y="58" width="60" height="8" rx="4" fill="#e6f0fb"/>
+            <rect x="262" y="70" width="40" height="6" rx="3" fill="#f1f7fb"/>
+          </g>
+
+          <!-- middle pipeline -->
+          <g>
+            <rect x="140" y="46" width="100" height="28" rx="14" fill="#fff" stroke="#e6f0fb"/>
+            <path d="M160 60 L220 60" stroke="url(#g1)" stroke-width="6" stroke-linecap="round" />
+            <circle cx="160" cy="60" r="6" fill="#00a3ff" />
+            <circle cx="220" cy="60" r="6" fill="#00c2a8" />
+          </g>
+
+          <!-- animated arrows (CSS will animate) -->
+          <g class="arrows" transform="translate(0,0)">
+            <path class="arrow1" d="M128 40 L140 34 L140 46 Z" fill="#00a3ff" opacity="0.95"/>
+            <path class="arrow2" d="M240 80 L252 74 L252 86 Z" fill="#00c2a8" opacity="0.95"/>
+          </g>
+
+          <!-- small charts / dashboard -->
+          <g transform="translate(60,110)">
+            <rect x="0" y="0" width="120" height="70" rx="8" fill="#fff" stroke="#e6f0fb"/>
+            <rect x="10" y="12" width="18" height="36" rx="3" fill="#00a3ff"/>
+            <rect x="34" y="6" width="18" height="42" rx="3" fill="#00c2a8"/>
+            <rect x="58" y="20" width="18" height="28" rx="3" fill="#ffd54a"/>
+            <rect x="82" y="10" width="18" height="38" rx="3" fill="#0b4a7a"/>
+          </g>
+
+          <g transform="translate(220,110)">
+            <rect x="0" y="0" width="120" height="70" rx="8" fill="#fff" stroke="#e6f0fb"/>
+            <circle cx="36" cy="36" r="18" fill="#00a3ff"/>
+            <circle cx="36" cy="36" r="10" fill="#fff"/>
+            <rect x="72" y="18" width="36" height="12" rx="6" fill="#00c2a8"/>
+            <rect x="72" y="36" width="24" height="8" rx="4" fill="#ffd54a"/>
+          </g>
+        </svg>
       </div>
     </div>
   </header>
 
-  <!-- Mobile menu toggle -->
-  <button class="menu-toggle" aria-controls="navbar" aria-expanded="false" onclick="toggleMenu()">☰ Menu</button>
+  <div class="wrap">
+    <nav aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-  <!-- Navigation -->
-  <nav id="navbar" aria-label="Main navigation">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <main>
+      <section id="about" class="fade">
+        <h2>About</h2>
+        <p class="lead">Results-driven Senior Software Engineer with 3+ years of experience specializing in data migration, ETL pipeline development, SQL query optimization, and BI reporting. Currently supporting ChitCore ERP with 150+ RDLC reports and enterprise migrations.</p>
+      </section>
 
-  <!-- Main content -->
-  <main>
-    <!-- About -->
-    <section id="about" class="fade-in">
-      <h2>About Me</h2>
-      <p class="lead">Results-driven engineer with 3+ years of experience in data migration, ETL pipeline development, SQL optimization, and enterprise-scale reporting. Proven expertise in SQL Server, MySQL, SSIS, and SSMA with a track record of delivering zero-data-loss migrations and scalable solutions.</p>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="slide-up">
-      <h2>Skills</h2>
-      <div class="grid">
-        <div class="card">
-          <h3 style="color:#004080; margin-bottom:8px;">ETL & Migration</h3>
-          <p>SSIS; SSMA; Data Pipelines; Data Mapping; MySQL → SQL Server migrations</p>
-        </div>
-        <div class="card">
-          <h3 style="color:#004080; margin-bottom:8px;">Databases & SQL</h3>
-          <p>SQL Server; MySQL; T-SQL; Stored Procedures; Indexing; Query Optimization</p>
-        </div>
-        <div class="card">
-          <h3 style="color:#004080; margin-bottom:8px;">BI & Reporting</h3>
-          <p>SSRS; SSAS; Power BI; RDLC Reports; KPI Dashboards</p>
-        </div>
-        <div class="card">
-          <h3 style="color:#004080; margin-bottom:8px;">Tools & Practices</h3>
-          <p>C#; .NET; ASP.NET; Visual Studio; Bitbucket; Jira; UAT; Data Validation</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section id="experience" class="fade-in">
-      <h2>Experience</h2>
-      <div class="grid">
-        <div class="card">
-          <div class="experience-item">
-            <strong>Senior Software Engineer — Novac Technology Solutions (Apr 2026 – Present)</strong>
-            <ul>
-              <li>Dedicated DB & reporting engineer for ChitCore ERP; authored 150+ RDLC reports.</li>
-              <li>Designed and optimized stored procedures, insert/update scripts; version-controlled via Bitbucket.</li>
-              <li>Led junior engineers; managed Jira tasks and UAT processes.</li>
-            </ul>
+      <section id="skills" class="fade">
+        <h2>Skills</h2>
+        <div class="grid">
+          <div class="card">
+            <div class="project-title">Data Migration & ETL</div>
+            <div class="muted">SSMA; SSIS; Data mapping; Zero-loss migration strategies; Incremental syncs</div>
+          </div>
+          <div class="card">
+            <div class="project-title">Databases & SQL</div>
+            <div class="muted">SQL Server; MySQL; T-SQL; Stored procedures; Indexing & query tuning</div>
+          </div>
+          <div class="card">
+            <div class="project-title">BI & Reporting</div>
+            <div class="muted">RDLC; SSRS; Power BI; KPI design; Dashboard performance tuning</div>
+          </div>
+          <div class="card">
+            <div class="project-title">Engineering Practices</div>
+            <div class="muted">C#; .NET; Version control; CI; UAT; Data validation & monitoring</div>
           </div>
         </div>
+      </section>
 
-        <div class="card">
-          <div class="experience-item">
-            <strong>Software Engineer — Novac Technology Solutions (Feb 2024 – Mar 2026)</strong>
-            <ul>
+      <section id="experience" class="fade">
+        <h2>Experience</h2>
+        <div class="grid">
+          <div class="card">
+            <strong>Senior Software Engineer — Novac Technology Solutions</strong>
+            <p class="muted">Apr 2026 – Present</p>
+            <ul style="margin-top:10px; color:#334155;">
+              <li>Lead DB & reporting engineer for ChitCore ERP; authored 150+ RDLC reports.</li>
+              <li>Optimized stored procedures and query plans; improved report performance.</li>
+              <li>Mentored team members on migration best practices and data validation.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <strong>Software Engineer — Novac Technology Solutions</strong>
+            <p class="muted">Feb 2024 – Mar 2026</p>
+            <ul style="margin-top:10px; color:#334155;">
               <li>Migrated 500+ tables and 10TB of production data (MySQL → SQL Server) using SSMA with zero data loss.</li>
-              <li>Built 15+ SSIS ETL pipelines; reduced manual processing by 60%.</li>
-              <li>Developed SSRS & Power BI dashboards; improved reporting efficiency by 35%.</li>
+              <li>Built automated SSIS pipelines; reduced manual effort by 60%.</li>
+              <li>Developed SSRS & Power BI dashboards for management reporting.</li>
             </ul>
           </div>
         </div>
+      </section>
 
-        <div class="card">
-          <div class="experience-item">
-            <strong>Software Engineer Trainee — Novac Technology Solutions (Feb 2023 – Feb 2024)</strong>
-            <ul>
-              <li>Trained in SQL Server, SSIS, T-SQL; contributed to migration and reporting tasks.</li>
-              <li>Assisted with data mapping, transformation logic, and validation testing.</li>
-            </ul>
+      <section id="projects" class="fade">
+        <h2>Featured Projects</h2>
+        <p class="muted">Selected work that demonstrates migration strategy, ETL automation, and reporting.</p>
+
+        <div class="grid" style="margin-top:12px;">
+          <div class="card">
+            <img class="project-thumb" src="images/chitcore.png" alt="ChitCore ERP screenshot placeholder">
+            <div class="project-title">ChitCore ERP — Reporting Suite</div>
+            <div class="project-desc">150+ RDLC reports across modules; optimized queries and report rendering for production scale.</div>
+            <a class="btn" href="#contact">Discuss</a>
+          </div>
+
+          <div class="card">
+            <img class="project-thumb" src="images/migration.png" alt="Enterprise migration screenshot placeholder">
+            <div class="project-title">Enterprise Migration</div>
+            <div class="project-desc">10TB migration using SSMA with zero downtime and robust validation checks.</div>
+            <a class="btn" href="#contact">Discuss</a>
+          </div>
+
+          <div class="card">
+            <img class="project-thumb" src="images/etl.png" alt="ETL automation screenshot placeholder">
+            <div class="project-title">ETL Automation</div>
+            <div class="project-desc">15+ SSIS workflows automating daily ETL and reducing manual intervention.</div>
+            <a class="btn" href="#contact">Discuss</a>
+          </div>
+
+          <div class="card">
+            <img class="project-thumb" src="images/bi.png" alt="BI reporting screenshot placeholder">
+            <div class="project-title">BI Reporting Suite</div>
+            <div class="project-desc">SSRS & Power BI dashboards with KPIs and drill-downs for executive decisions.</div>
+            <a class="btn" href="#contact">Discuss</a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Projects / Showcase -->
-    <section id="projects" class="slide-up">
-      <h2>Featured Projects</h2>
-      <p class="lead">A showcase of work in data migration, ETL automation, and business intelligence.</p>
+      <section id="contact" class="fade">
+        <h2>Contact</h2>
+        <p class="muted">Use the form below to send a clear, structured message. The form opens your email client with a tidy subject and body ready to send.</p>
 
-      <div class="project-grid grid" style="margin-top:18px;">
-        <div class="card project-card">
-          <img src="images/chitcore.png" alt="ChitCore ERP screenshot placeholder">
-          <h3>ChitCore ERP</h3>
-          <p>Designed 150+ RDLC reports; optimized SQL scripts for production ERP.</p>
-          <a class="btn" href="#projects">Learn More</a>
-        </div>
+        <!-- Contact form: uses JS to open mail client with clean subject/body -->
+        <form class="contact-form" id="contactForm" onsubmit="handleContact(event)" novalidate>
+          <div class="form-row">
+            <div>
+              <label for="name" class="small">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your full name" required>
+            </div>
+            <div>
+              <label for="email" class="small">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required>
+            </div>
+          </div>
 
-        <div class="card project-card">
-          <img src="images/migration.png" alt="Enterprise migration screenshot placeholder">
-          <h3>Enterprise Migration</h3>
-          <p>Migrated 10TB of data and 500+ tables using SSMA with zero data loss.</p>
-          <a class="btn" href="#projects">Learn More</a>
-        </div>
+          <div class="form-row single" style="margin-top:10px;">
+            <div>
+              <label for="subject" class="small">Subject</label>
+              <input id="subject" name="subject" type="text" placeholder="Short subject (e.g., Project inquiry)" required>
+            </div>
+          </div>
 
-        <div class="card project-card">
-          <img src="images/etl.png" alt="ETL automation screenshot placeholder">
-          <h3>ETL Automation</h3>
-          <p>Built 15+ SSIS workflows to automate daily ETL and reduce manual effort by 60%.</p>
-          <a class="btn" href="#projects">Learn More</a>
-        </div>
+          <div class="form-row single" style="margin-top:10px;">
+            <div>
+              <label for="message" class="small">Message</label>
+              <textarea id="message" name="message" placeholder="Briefly describe the project, timeline, and what you need" required></textarea>
+            </div>
+          </div>
 
-        <div class="card project-card">
-          <img src="images/bi.png" alt="BI reporting screenshot placeholder">
-          <h3>BI Reporting Suite</h3>
-          <p>SSRS & Power BI dashboards with KPIs and drill-downs for management reporting.</p>
-          <a class="btn" href="#projects">Learn More</a>
-        </div>
-      </div>
-    </section>
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Open Email Client</button>
+            <button type="button" class="btn" onclick="fillTemplate()">Use Template</button>
+            <div style="align-self:center;" class="small muted">Or email directly: <a href="mailto:senthilcsk03@gmail.com">senthilcsk03@gmail.com</a></div>
+          </div>
+        </form>
+      </section>
+    </main>
 
-    <!-- Contact -->
-    <section id="contact" class="fade-in">
-      <h2>Contact</h2>
-      <p class="lead">Interested in collaborating or learning more? Reach out via email or use the form below.</p>
+    <footer>
+      <div class="small muted">© 2026 Senthil Kumar C — Data Migration & BI Engineer</div>
+    </footer>
+  </div>
 
-      <form action="mailto:senthilcsk03@gmail.com" method="post" enctype="text/plain" aria-label="Contact form">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" required placeholder="Your name">
-
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" required placeholder="you@example.com">
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required placeholder="Tell me about your project or opportunity"></textarea>
-
-        <button type="submit" class="btn">Send Message</button>
-      </form>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 Senthil Kumar C — Senior Software Engineer</p>
-  </footer>
-
-  <!-- Inline JavaScript: menu toggle, scroll animations, smooth nav offset -->
+  <!-- JavaScript: animations, contact mailto builder -->
   <script>
-    // Mobile menu toggle
-    function toggleMenu() {
-      const nav = document.getElementById('navbar');
-      nav.classList.toggle('active');
-      const expanded = nav.classList.contains('active');
-      document.querySelector('.menu-toggle').setAttribute('aria-expanded', expanded);
+    // Entrance animations
+    document.addEventListener('DOMContentLoaded', function () {
+      const fades = document.querySelectorAll('.fade');
+      const onScroll = () => {
+        fades.forEach(el => {
+          const r = el.getBoundingClientRect();
+          if (r.top < window.innerHeight - 80) el.classList.add('visible');
+        });
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    });
+
+    // Contact form: build a clean mailto link and open user's mail client
+    function handleContact(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const subject = document.getElementById('subject').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !email || !subject || !message) {
+        alert('Please complete all fields before sending.');
+        return;
+      }
+
+      // Build a tidy, structured email body
+      const bodyLines = [
+        `Hello Senthil,`,
+        ``,
+        `My name: ${name}`,
+        `Email: ${email}`,
+        ``,
+        `Project summary:`,
+        `${message}`,
+        ``,
+        `Preferred timeline:`,
+        `Budget (optional):`,
+        ``,
+        `Thanks,`,
+        `${name}`
+      ];
+      const body = encodeURIComponent(bodyLines.join('\n'));
+      const mailto = `mailto:senthilcsk03@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+
+      // Open default mail client
+      window.location.href = mailto;
     }
 
-    // Scroll-triggered animations
-    (function() {
-      const animated = document.querySelectorAll('.fade-in, .slide-up');
-      function onScroll() {
-        animated.forEach(el => {
-          const rect = el.getBoundingClientRect();
-          if (rect.top < window.innerHeight - 80) el.classList.add('visible');
-        });
-      }
-      window.addEventListener('scroll', onScroll, { passive: true });
-      window.addEventListener('load', onScroll);
-      // initial call
-      onScroll();
-    })();
-
-    // Smooth nav with offset for sticky nav
-    (function() {
-      const navLinks = document.querySelectorAll('nav a');
-      navLinks.forEach(a => {
-        a.addEventListener('click', function(e) {
-          e.preventDefault();
-          const id = this.getAttribute('href').slice(1);
-          const el = document.getElementById(id);
-          if (!el) return;
-          const navHeight = document.querySelector('nav').offsetHeight || 60;
-          const top = el.getBoundingClientRect().top + window.pageYOffset - navHeight - 12;
-          window.scrollTo({ top, behavior: 'smooth' });
-          // close mobile nav if open
-          const nav = document.getElementById('navbar');
-          if (nav.classList.contains('active')) nav.classList.remove('active');
-        });
-      });
-    })();
+    // Fill template helper
+    function fillTemplate() {
+      document.getElementById('subject').value = 'Project Inquiry: Data Migration / ETL';
+      document.getElementById('message').value =
+`Short summary of the project and goals:
+- Source systems:
+- Target systems:
+- Data volume estimate:
+- Desired timeline:
+- Key success criteria:`;
+      document.getElementById('name').focus();
+    }
   </script>
 </body>
 </html>
