@@ -1,20 +1,23 @@
-# Senthil Kumar C - Portfolio
+# Senthil Kumar C — Portfolio
 
-This repository hosts a single-file portfolio website for Senthil Kumar C, a Senior Software Engineer specializing in data migration, ETL, SQL optimization, and BI reporting.
+**Results-driven Senior Software Engineer with 3+ years of experience specializing in data migration, ETL pipeline development, SQL query optimization, and database engineering.**  
+**Currently supporting ChitCore, a live production chit fund management ERP serving 150+ RDLC reports across modules including customer, agent, branch, group, chit, ledger, receipts, and legal operations.**
 
-**Features**
-- Single `index.html` containing HTML, CSS, and JavaScript
-- Project showcase with embedded images (optional: Base64 data URIs)
-- Resume download button
-- Contact form (mailto)
-- Responsive layout, scroll animations, and smooth navigation
+---
 
-**How to use**
-1. Place `index.html` in the repository root.
-2. Option A (recommended): Add an `images/` folder with screenshots and `Senthil_Kumar_C_Resume_Final.pdf` in the root.
-3. Option B: Replace image references in `index.html` with Base64 data URIs (see instructions below).
-4. Push to GitHub and enable GitHub Pages (branch `main`, folder `/root`) or deploy to Netlify.
+## About
+This repository contains a single‑file, responsive portfolio website for **Senthil Kumar C**. It showcases professional experience, technical skills, featured projects, and provides a downloadable resume and contact form for recruiters or collaborators.
 
-**Notes**
-- If you embed images as Base64, the HTML file size will increase.
-- Keep the resume PDF in the repo root so the download button works.
+---
+
+## Features
+- **Single `index.html`** containing HTML, CSS, and JavaScript for easy deployment.  
+- **Responsive design** with a modern theme, sticky navigation, and mobile menu.  
+- **Project showcase** with image placeholders and “Learn More” CTAs.  
+- **Downloadable resume** button linked to `Senthil_Kumar_C_Resume_Final.pdf`.  
+- **Contact form** (mailto) for direct outreach.  
+- **Scroll animations** and smooth navigation for a polished user experience.
+
+---
+
+## Repository structure
