@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<meta name="description" content="Senthil Kumar C â€” Senior Software Engineer, Data Migration Specialist"/>
+<meta name="description" content="Senthil Kumar C — Senior Software Engineer, Data Migration Specialist"/>
 <title>Senthil Kumar C | Data Engineer</title>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
 <style>
@@ -25,14 +25,14 @@
 html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--text);font-family:var(--font-mono);overflow-x:hidden;cursor:crosshair;}
 
-/* â”€â”€ GRID OVERLAY â”€â”€ */
+/* ── GRID OVERLAY ── */
 body::before{
   content:'';position:fixed;inset:0;
   background-image:linear-gradient(rgba(0,212,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,.03) 1px,transparent 1px);
   background-size:40px 40px;pointer-events:none;z-index:0;
 }
 
-/* â”€â”€ SCAN LINE â”€â”€ */
+/* ── SCAN LINE ── */
 body::after{
   content:'';position:fixed;top:-100%;left:0;width:100%;height:2px;
   background:linear-gradient(90deg,transparent,rgba(0,212,255,.4),transparent);
@@ -40,7 +40,7 @@ body::after{
 }
 @keyframes scan{to{top:100%;}}
 
-/* â”€â”€ NAV â”€â”€ */
+/* ── NAV ── */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:100;
   display:flex;align-items:center;justify-content:space-between;
@@ -69,7 +69,7 @@ nav{
 }
 .nav-cta:hover{background:var(--accent);color:var(--bg);}
 
-/* â”€â”€ HERO â”€â”€ */
+/* ── HERO ── */
 #hero{
   min-height:100vh;display:flex;align-items:center;
   padding:100px 40px 60px;max-width:1200px;margin:0 auto;
@@ -110,7 +110,7 @@ nav{
 .stat-num{font-family:var(--font-head);font-size:1.8rem;font-weight:800;color:var(--accent);}
 .stat-label{font-size:.68rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:.1em;margin-top:2px;}
 
-/* â”€â”€ PIPELINE ANIMATION â”€â”€ */
+/* ── PIPELINE ANIMATION ── */
 .pipeline-canvas{position:relative;width:100%;height:420px;}
 svg.pipeline{width:100%;height:100%;}
 .pipe-node{fill:var(--surface2);stroke:var(--border);stroke-width:1.5;}
@@ -131,7 +131,7 @@ svg.pipeline{width:100%;height:100%;}
 .packet.g{background:var(--accent2);box-shadow:0 0 8px var(--accent2);}
 .packet.o{background:var(--accent3);box-shadow:0 0 8px var(--accent3);}
 
-/* â”€â”€ SECTION COMMON â”€â”€ */
+/* ── SECTION COMMON ── */
 section{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:80px 40px;}
 .section-label{
   display:flex;align-items:center;gap:12px;
@@ -144,11 +144,11 @@ section{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:80px 
 }
 .section-title span{color:var(--accent);}
 
-/* â”€â”€ DIVIDER â”€â”€ */
+/* ── DIVIDER ── */
 .divider{max-width:1200px;margin:0 auto;padding:0 40px;}
 .divider hr{border:none;border-top:1px solid var(--border);}
 
-/* â”€â”€ SKILLS â”€â”€ */
+/* ── SKILLS ── */
 .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2px;}
 .skill-block{
   padding:28px;background:var(--surface);border:1px solid var(--border);
@@ -172,7 +172,7 @@ section{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:80px 
 .tag.g{background:rgba(0,255,159,.08);border-color:rgba(0,255,159,.2);color:var(--accent2);}
 .tag.o{background:rgba(255,107,53,.08);border-color:rgba(255,107,53,.2);color:var(--accent3);}
 
-/* â”€â”€ EXPERIENCE â”€â”€ */
+/* ── EXPERIENCE ── */
 .exp-list{display:flex;flex-direction:column;gap:2px;}
 .exp-item{
   display:grid;grid-template-columns:220px 1fr;background:var(--surface);
@@ -189,14 +189,14 @@ section{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:80px 
 .exp-role{font-family:var(--font-head);font-size:1rem;font-weight:700;color:#fff;margin-bottom:14px;}
 .exp-ul{list-style:none;display:flex;flex-direction:column;gap:8px;}
 .exp-ul li{font-size:.8rem;line-height:1.7;color:var(--text-dim);padding-left:16px;position:relative;}
-.exp-ul li::before{content:'â†’';position:absolute;left:0;color:var(--accent);font-size:.75rem;}
+.exp-ul li::before{content:'→';position:absolute;left:0;color:var(--accent);font-size:.75rem;}
 .badge{
   display:inline-block;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;
   padding:3px 8px;background:rgba(0,255,159,.1);border:1px solid rgba(0,255,159,.25);
   color:var(--accent2);margin-top:12px;
 }
 
-/* â”€â”€ PROJECTS â”€â”€ */
+/* ── PROJECTS ── */
 .proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2px;}
 .proj-card{
   background:var(--surface);border:1px solid var(--border);padding:28px;
@@ -218,9 +218,9 @@ section{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:80px 
   display:flex;align-items:center;gap:8px;
   font-size:.7rem;color:var(--accent2);border-top:1px solid var(--border);padding-top:12px;margin-top:auto;
 }
-.proj-metric::before{content:'â—†';font-size:.55rem;}
+.proj-metric::before{content:'◆';font-size:.55rem;}
 
-/* â”€â”€ DATA FLOW ANIMATION â”€â”€ */
+/* ── DATA FLOW ANIMATION ── */
 .flow-section{
   background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);
   padding:60px 0;overflow:hidden;position:relative;z-index:2;
@@ -259,7 +259,7 @@ section{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:80px 
 }
 @keyframes blink{50%{opacity:0;}}
 
-/* â”€â”€ CONTACT â”€â”€ */
+/* ── CONTACT ── */
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;}
 .contact-box{background:var(--surface);border:1px solid var(--border);padding:32px;}
 .contact-item{
@@ -292,7 +292,7 @@ section{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:80px 
 }
 .form-btn:hover{background:var(--accent2);}
 
-/* â”€â”€ FOOTER â”€â”€ */
+/* ── FOOTER ── */
 footer{
   border-top:1px solid var(--border);background:var(--surface);
   padding:30px 40px;display:flex;align-items:center;justify-content:space-between;
@@ -302,11 +302,11 @@ footer{
 .footer-sig{font-size:.7rem;color:var(--text-dim);}
 .footer-sig span{color:var(--accent2);}
 
-/* â”€â”€ ANIMATIONS ON SCROLL â”€â”€ */
+/* ── ANIMATIONS ON SCROLL ── */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
 
-/* â”€â”€ HAMBURGER â”€â”€ */
+/* ── HAMBURGER ── */
 .nav-hamburger{
   display:none;flex-direction:column;justify-content:center;gap:5px;
   width:36px;height:36px;background:none;border:1px solid var(--border);
@@ -321,7 +321,7 @@ footer{
 .nav-hamburger.open span:nth-child(2){opacity:0;}
 .nav-hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);background:var(--accent);}
 
-/* â”€â”€ MOBILE DRAWER â”€â”€ */
+/* ── MOBILE DRAWER ── */
 .mobile-drawer{
   display:none;position:fixed;top:56px;left:0;right:0;z-index:99;
   background:rgba(7,12,20,.98);border-bottom:1px solid var(--border);
@@ -347,7 +347,7 @@ footer{
 }
 .drawer-cta:hover{background:var(--accent2) !important;color:var(--bg) !important;}
 
-/* â”€â”€ RESPONSIVE â”€â”€ */
+/* ── RESPONSIVE ── */
 @media(max-width:900px){
   .hero-inner{grid-template-columns:1fr;}
   .pipeline-canvas{display:none;}
@@ -368,7 +368,7 @@ footer{
 </head>
 <body>
 
-<!-- â”€â”€ NAV â”€â”€ -->
+<!-- ── NAV ── -->
 <nav>
   <div class="nav-logo">SK<span>.</span>DATA</div>
   <div class="nav-links">
@@ -378,33 +378,33 @@ footer{
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </div>
-  <a class="nav-cta" href="Senthil_Kumar_C_Resume_Final.pdf" download>Resume â†“</a>
+  <a class="nav-cta" href="Senthil_Kumar_C_Resume_Final.pdf" download>Resume ↓</a>
   <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
-<!-- â”€â”€ MOBILE DRAWER â”€â”€ -->
+<!-- ── MOBILE DRAWER ── -->
 <div class="mobile-drawer" id="mobileDrawer">
   <a href="#about">About</a>
   <a href="#skills">Skills</a>
   <a href="#experience">Experience</a>
   <a href="#projects">Projects</a>
   <a href="#contact">Contact</a>
-  <a class="drawer-cta" href="Senthil_Kumar_C_Resume_Final.pdf" download>Download Resume â†“</a>
+  <a class="drawer-cta" href="Senthil_Kumar_C_Resume_Final.pdf" download>Download Resume ↓</a>
 </div>
 
-<!-- â”€â”€ HERO â”€â”€ -->
+<!-- ── HERO ── -->
 <section id="about">
 <div id="hero">
   <div class="hero-inner">
     <div class="hero-content">
       <div class="hero-tag">Available for opportunities</div>
       <h1 class="hero-title">Senthil<br><span class="accent">Kumar C</span></h1>
-      <p class="hero-sub">Senior Software Engineer Â· Data Migration Specialist</p>
+      <p class="hero-sub">Senior Software Engineer · Data Migration Specialist</p>
       <p class="hero-desc">
         3+ years engineering zero-data-loss migrations, ETL automation, and enterprise BI pipelines.
-        Specialist in MySQL â†’ SQL Server transitions, SSIS workflows, and production-grade SSRS / Power BI reporting.
+        Specialist in MySQL → SQL Server transitions, SSIS workflows, and production-grade SSRS / Power BI reporting.
       </p>
       <div class="hero-btns">
         <a class="btn-primary" href="#contact">Get in touch</a>
@@ -418,7 +418,7 @@ footer{
       </div>
     </div>
 
-    <!-- â”€â”€ PIPELINE SVG ANIMATION â”€â”€ -->
+    <!-- ── PIPELINE SVG ANIMATION ── -->
     <div class="pipeline-canvas">
       <svg class="pipeline" viewBox="0 0 460 420" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -455,4 +455,477 @@ footer{
         </line>
 
         <!-- SSIS ETL center -->
-        <rect x="192" y="110" width="140"
+        <rect x="192" y="110" width="140" height="80" rx="3" fill="#0a1a28" stroke="#00d4ff" stroke-width="1.5"/>
+        <text x="262" y="138" text-anchor="middle" class="pipe-label" font-weight="700" fill="#00d4ff">SSIS ETL</text>
+        <text x="262" y="155" text-anchor="middle" class="pipe-label-sm">Extract · Transform</text>
+        <text x="262" y="170" text-anchor="middle" class="pipe-label-sm">Load Pipeline</text>
+        <!-- moving dots inside SSIS -->
+        <circle cx="210" cy="150" r="3" fill="#00ff9f" opacity=".7">
+          <animate attributeName="cx" values="210;330;210" dur="1.8s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values=".7;1;.7" dur="1.8s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="220" cy="155" r="2" fill="#00d4ff" opacity=".5">
+          <animate attributeName="cx" values="220;320;220" dur="2.1s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="215" cy="145" r="2" fill="#ff6b35" opacity=".5">
+          <animate attributeName="cx" values="215;325;215" dur="2.4s" repeatCount="indefinite"/>
+        </circle>
+
+        <!-- Arrow right from SSIS to SQL Server -->
+        <line x1="332" y1="150" x2="370" y2="150" stroke="#00d4ff" stroke-width="1.5" marker-end="url(#arr-a)" stroke-dasharray="4 3">
+          <animate attributeName="stroke-dashoffset" from="14" to="0" dur=".6s" repeatCount="indefinite"/>
+        </line>
+
+        <!-- SQL Server -->
+        <rect x="372" y="122" width="68" height="56" rx="3" class="pipe-node-active"/>
+        <text x="406" y="145" text-anchor="middle" class="pipe-label" font-weight="600" fill="#00ff9f">SQL</text>
+        <text x="406" y="158" text-anchor="middle" class="pipe-label" font-weight="600" fill="#00ff9f">Server</text>
+        <text x="406" y="172" text-anchor="middle" class="pipe-label-sm">Target</text>
+
+        <!-- Arrow down from SQL Server -->
+        <line x1="406" y1="178" x2="406" y2="220" stroke="#00ff9f" stroke-width="1.5" marker-end="url(#arr-a)" stroke-dasharray="4 3">
+          <animate attributeName="stroke-dashoffset" from="14" to="0" dur=".6s" repeatCount="indefinite"/>
+        </line>
+
+        <!-- Reporting layer -->
+        <rect x="192" y="222" width="80" height="50" rx="3" class="pipe-node"/>
+        <text x="232" y="244" text-anchor="middle" class="pipe-label" fill="#ff6b35">SSRS</text>
+        <text x="232" y="260" text-anchor="middle" class="pipe-label-sm">Reports</text>
+
+        <rect x="282" y="222" width="80" height="50" rx="3" class="pipe-node"/>
+        <text x="322" y="244" text-anchor="middle" class="pipe-label" fill="#ff6b35">Power BI</text>
+        <text x="322" y="260" text-anchor="middle" class="pipe-label-sm">Dashboards</text>
+
+        <rect x="372" y="222" width="68" height="50" rx="3" class="pipe-node"/>
+        <text x="406" y="244" text-anchor="middle" class="pipe-label" fill="#ff6b35">SSAS</text>
+        <text x="406" y="260" text-anchor="middle" class="pipe-label-sm">Analysis</text>
+
+        <!-- connect SQL Server to all 3 BI tools -->
+        <line x1="406" y1="220" x2="232" y2="222" stroke="#ff6b35" stroke-width="1" stroke-dasharray="3 3" opacity=".6"/>
+        <line x1="406" y1="220" x2="322" y2="222" stroke="#ff6b35" stroke-width="1" stroke-dasharray="3 3" opacity=".6"/>
+        <line x1="406" y1="220" x2="406" y2="222" stroke="#ff6b35" stroke-width="1" stroke-dasharray="3 3" opacity=".6"/>
+
+        <!-- Validation box -->
+        <rect x="20" y="220" width="130" height="50" rx="3" class="pipe-node"/>
+        <text x="85" y="241" text-anchor="middle" class="pipe-label" fill="#00ff9f">Validation</text>
+        <text x="85" y="257" text-anchor="middle" class="pipe-label-sm">0 data loss · UAT</text>
+
+        <!-- Arrow from SSMA down to Validation -->
+        <line x1="85" y1="178" x2="85" y2="220" stroke="#1a2d45" stroke-width="1.5" marker-end="url(#arr)"/>
+
+        <!-- Status badges -->
+        <rect x="20" y="300" width="420" height="100" rx="3" fill="#050a12" stroke="#1a2d45" stroke-width="1"/>
+        <text x="36" y="322" class="pipe-label-sm" fill="#3a5570">-- pipeline status monitor</text>
+        <text x="36" y="344" class="pipe-label" fill="#569cd6">SELECT</text>
+        <text x="90" y="344" class="pipe-label" fill="#00ff9f"> rows_migrated</text>
+        <text x="200" y="344" class="pipe-label" fill="#569cd6">, status</text>
+        <text x="36" y="364" class="pipe-label" fill="#569cd6">FROM</text>
+        <text x="84" y="364" class="pipe-label" fill="#ce9178"> migration_log</text>
+        <text x="36" y="384" class="pipe-label" fill="#569cd6">WHERE</text>
+        <text x="94" y="384" class="pipe-label" fill="#00d4ff"> data_loss</text>
+        <text x="176" y="384" class="pipe-label" fill="#d4d4d4"> = </text>
+        <text x="190" y="384" class="pipe-label" fill="#b5cea8">0</text>
+        <text x="212" y="384" class="pipe-label" fill="#3a5570"> -- always</text>
+        <!-- blinking cursor -->
+        <rect x="310" y="372" width="8" height="14" fill="#00d4ff" rx="1">
+          <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+        </rect>
+      </svg>
+    </div>
+  </div>
+</div>
+</section>
+
+<div class="divider"><hr/></div>
+
+<!-- ── FLOW ANIMATION STRIP ── -->
+<div class="flow-section">
+  <div class="flow-inner">
+    <div class="flow-title">// live migration pipeline — data in flight</div>
+
+    <!-- Horizontal pipe with animated packets -->
+    <div style="position:relative;height:60px;display:flex;align-items:center;overflow:hidden;">
+      <!-- Track -->
+      <div style="width:100%;height:2px;background:var(--border);position:relative;">
+        <!-- Animated dots -->
+        <div style="position:absolute;top:-4px;left:0;width:100%;overflow:hidden;height:10px;">
+          <div style="display:flex;gap:0;animation:marqueeDots 4s linear infinite;width:200%;">
+            <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 6px var(--accent);margin-right:60px;"></span>
+            <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent2);box-shadow:0 0 6px var(--accent2);margin-right:80px;"></span>
+            <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent3);box-shadow:0 0 6px var(--accent3);margin-right:100px;"></span>
+            <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 6px var(--accent);margin-right:70px;"></span>
+            <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent2);box-shadow:0 0 6px var(--accent2);margin-right:90px;"></span>
+            <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent3);box-shadow:0 0 6px var(--accent3);margin-right:60px;"></span>
+            <!-- repeat for seamless loop -->
+            <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 6px var(--accent);margin-right:60px;"></span>
+            <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent2);box-shadow:0 0 6px var(--accent2);margin-right:80px;"></span>
+            <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent3);box-shadow:0 0 6px var(--accent3);margin-right:100px;"></span>
+            <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 6px var(--accent);margin-right:70px;"></span>
+            <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent2);box-shadow:0 0 6px var(--accent2);margin-right:90px;"></span>
+            <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent3);box-shadow:0 0 6px var(--accent3);margin-right:60px;"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stage labels -->
+    <div style="display:flex;justify-content:space-between;margin-top:16px;flex-wrap:wrap;gap:8px;">
+      <div style="text-align:center;flex:1;min-width:80px;">
+        <div style="font-size:.65rem;color:var(--text-dim);letter-spacing:.1em;text-transform:uppercase;">MySQL</div>
+        <div style="font-size:.7rem;color:var(--accent);margin-top:4px;">Source</div>
+      </div>
+      <div style="text-align:center;flex:1;min-width:80px;">
+        <div style="font-size:.65rem;color:var(--text-dim);letter-spacing:.1em;text-transform:uppercase;">SSMA</div>
+        <div style="font-size:.7rem;color:var(--accent);margin-top:4px;">Schema Conv.</div>
+      </div>
+      <div style="text-align:center;flex:1;min-width:80px;">
+        <div style="font-size:.65rem;color:var(--text-dim);letter-spacing:.1em;text-transform:uppercase;">SSIS</div>
+        <div style="font-size:.7rem;color:var(--accent);margin-top:4px;">ETL Engine</div>
+      </div>
+      <div style="text-align:center;flex:1;min-width:80px;">
+        <div style="font-size:.65rem;color:var(--text-dim);letter-spacing:.1em;text-transform:uppercase;">T-SQL</div>
+        <div style="font-size:.7rem;color:var(--accent);margin-top:4px;">Transform</div>
+      </div>
+      <div style="text-align:center;flex:1;min-width:80px;">
+        <div style="font-size:.65rem;color:var(--text-dim);letter-spacing:.1em;text-transform:uppercase;">Validation</div>
+        <div style="font-size:.7rem;color:var(--accent2);margin-top:4px;">0 Loss ✓</div>
+      </div>
+      <div style="text-align:center;flex:1;min-width:80px;">
+        <div style="font-size:.65rem;color:var(--text-dim);letter-spacing:.1em;text-transform:uppercase;">SQL Server</div>
+        <div style="font-size:.7rem;color:var(--accent2);margin-top:4px;">Target ✓</div>
+      </div>
+      <div style="text-align:center;flex:1;min-width:80px;">
+        <div style="font-size:.65rem;color:var(--text-dim);letter-spacing:.1em;text-transform:uppercase;">Power BI</div>
+        <div style="font-size:.7rem;color:var(--accent3);margin-top:4px;">Reporting</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+@keyframes marqueeDots{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+</style>
+
+<div class="divider"><hr/></div>
+
+<!-- ── SKILLS ── -->
+<section id="skills" class="reveal">
+  <div class="section-label">Core competencies</div>
+  <h2 class="section-title">Technical <span>Stack</span></h2>
+  <div class="skills-grid">
+    <div class="skill-block">
+      <div class="skill-icon">🗄️</div>
+      <div class="skill-title">Database Engineering</div>
+      <p style="font-size:.78rem;color:var(--text-dim);line-height:1.7;">Expert-level SQL Server & MySQL design, T-SQL stored procedures, indexing strategies, and query optimization for high-throughput production systems.</p>
+      <div class="skill-tags">
+        <span class="tag">SQL Server</span>
+        <span class="tag">MySQL</span>
+        <span class="tag">T-SQL</span>
+        <span class="tag">Indexing</span>
+      </div>
+    </div>
+    <div class="skill-block">
+      <div class="skill-icon">⚙️</div>
+      <div class="skill-title">ETL & Migration</div>
+      <p style="font-size:.78rem;color:var(--text-dim);line-height:1.7;">End-to-end ETL pipeline design with SSIS; schema & data migration using SSMA; zero-data-loss guarantees across terabyte-scale workloads.</p>
+      <div class="skill-tags">
+        <span class="tag g">SSIS</span>
+        <span class="tag g">SSMA</span>
+        <span class="tag g">ETL Pipelines</span>
+        <span class="tag g">Data Mapping</span>
+      </div>
+    </div>
+    <div class="skill-block">
+      <div class="skill-icon">📊</div>
+      <div class="skill-title">BI & Reporting</div>
+      <p style="font-size:.78rem;color:var(--text-dim);line-height:1.7;">Authored 150+ RDLC reports; built SSRS & Power BI dashboards with drill-downs, KPIs, and parameterized views for executive reporting.</p>
+      <div class="skill-tags">
+        <span class="tag o">SSRS</span>
+        <span class="tag o">Power BI</span>
+        <span class="tag o">SSAS</span>
+        <span class="tag o">RDLC</span>
+      </div>
+    </div>
+    <div class="skill-block">
+      <div class="skill-icon">💻</div>
+      <div class="skill-title">Application & DevOps</div>
+      <p style="font-size:.78rem;color:var(--text-dim);line-height:1.7;">C# / .NET / ASP.NET integration; Bitbucket version control; Jira project tracking; UAT management and junior engineer mentoring.</p>
+      <div class="skill-tags">
+        <span class="tag">C#</span>
+        <span class="tag">.NET</span>
+        <span class="tag">Bitbucket</span>
+        <span class="tag">Jira</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><hr/></div>
+
+<!-- ── EXPERIENCE ── -->
+<section id="experience" class="reveal">
+  <div class="section-label">Career timeline</div>
+  <h2 class="section-title">Work <span>Experience</span></h2>
+  <div class="exp-list">
+
+    <div class="exp-item">
+      <div class="exp-left">
+        <div>
+          <div class="exp-date">Apr 2026 — Present</div>
+          <div class="exp-company">Novac Technology Solutions</div>
+        </div>
+        <span class="badge">Current role</span>
+      </div>
+      <div class="exp-right">
+        <div class="exp-role">Senior Software Engineer</div>
+        <ul class="exp-ul">
+          <li>Dedicated DB & reporting engineer for ChitCore ERP; sole owner of 150+ production RDLC reports covering financial, operational, and compliance domains.</li>
+          <li>Designed and continuously optimized stored procedures, bulk insert/update scripts; all changes version-controlled via Bitbucket with peer review.</li>
+          <li>Led and mentored 2 junior engineers; managed sprint tasks in Jira and owned UAT sign-off process.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-left">
+        <div>
+          <div class="exp-date">Feb 2024 — Mar 2026</div>
+          <div class="exp-company">Novac Technology Solutions</div>
+        </div>
+      </div>
+      <div class="exp-right">
+        <div class="exp-role">Software Engineer</div>
+        <ul class="exp-ul">
+          <li>Executed enterprise MySQL → SQL Server migration: 500+ tables, 10TB production data using SSMA — delivered with zero data loss across all validation checks.</li>
+          <li>Engineered 15+ SSIS ETL pipelines for daily data synchronization and transformation; reduced manual processing overhead by 60%.</li>
+          <li>Developed SSRS and Power BI dashboards with KPI drill-downs; improved reporting turnaround by 35% for management teams.</li>
+          <li>Optimized critical T-SQL queries and stored procedures, reducing average report generation time by 40%.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-left">
+        <div>
+          <div class="exp-date">Feb 2023 — Feb 2024</div>
+          <div class="exp-company">Novac Technology Solutions</div>
+        </div>
+      </div>
+      <div class="exp-right">
+        <div class="exp-role">Software Engineer Trainee</div>
+        <ul class="exp-ul">
+          <li>Intensive training in SQL Server architecture, SSIS package development, and T-SQL procedural programming.</li>
+          <li>Contributed to data mapping documents, transformation rule definitions, and validation test suites for the migration project.</li>
+          <li>Assisted senior engineers on schema analysis, data profiling, and pre-migration quality assessments.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"><hr/></div>
+
+<!-- ── SQL TERMINAL STRIP ── -->
+<div class="flow-section">
+  <div class="flow-inner">
+    <div class="flow-title">// T-SQL — stored procedure sample</div>
+    <div class="terminal">
+      <div class="terminal-bar">
+        <div class="t-dot r"></div>
+        <div class="t-dot y"></div>
+        <div class="t-dot g"></div>
+        <div class="t-title">migration_proc.sql — SQL Server 2022</div>
+      </div>
+      <div class="terminal-body">
+        <div class="t-comment">-- Zero-data-loss migration validation procedure</div>
+        <div><span class="t-kw">CREATE PROCEDURE</span> <span class="t-fn">usp_ValidateMigration</span></div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;@TableName <span class="t-kw">NVARCHAR</span>(128),</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;@SourceRowCount <span class="t-kw">BIGINT OUTPUT</span>,</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;@TargetRowCount <span class="t-kw">BIGINT OUTPUT</span></div>
+        <div><span class="t-kw">AS BEGIN</span></div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-kw">SET NOCOUNT ON</span>;</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-kw">SELECT</span> <span class="t-var">@SourceRowCount</span> = <span class="t-fn">COUNT_BIG</span>(*)</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-kw">FROM</span> <span class="t-str">MySQL_Linked_Server</span>.<span class="t-var">@TableName</span>;</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-kw">SELECT</span> <span class="t-var">@TargetRowCount</span> = <span class="t-fn">COUNT_BIG</span>(*)</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-kw">FROM</span> <span class="t-var">@TableName</span>;</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-kw">IF</span> <span class="t-var">@SourceRowCount</span> &lt;&gt; <span class="t-var">@TargetRowCount</span></div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-fn">RAISERROR</span>(<span class="t-str">'Row count mismatch detected!'</span>, <span class="t-num">16</span>, <span class="t-num">1</span>);</div>
+        <div><span class="t-kw">END</span></div>
+        <div>&nbsp;</div>
+        <div><span class="t-out">-- Result: 500 tables · 0 mismatches · 10TB verified ✓</span> <span class="cursor"></span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"><hr/></div>
+
+<!-- ── PROJECTS ── -->
+<section id="projects" class="reveal">
+  <div class="section-label">Featured work</div>
+  <h2 class="section-title">Key <span>Projects</span></h2>
+  <div class="proj-grid">
+
+    <div class="proj-card">
+      <div class="proj-num">01</div>
+      <div class="proj-title">Enterprise MySQL → SQL Server Migration</div>
+      <p class="proj-desc">Full-scale database migration of 500+ production tables and 10TB of data using SSMA. Included schema conversion, data type mapping, constraint validation, and rollback planning. Delivered with zero data loss and full audit trail.</p>
+      <div class="proj-metric">500 tables · 10TB · 0 data loss · 8-week delivery</div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-num">02</div>
+      <div class="proj-title">SSIS ETL Automation Suite</div>
+      <p class="proj-desc">Designed and deployed 15+ SSIS packages for daily incremental loads, lookup transformations, slowly-changing dimension handling, and error logging. Replaced manual CSV imports entirely, cutting processing time by 60%.</p>
+      <div class="proj-metric">15 pipelines · 60% effort reduction · daily SLA met</div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-num">03</div>
+      <div class="proj-title">ChitCore ERP Reporting Layer</div>
+      <p class="proj-desc">Sole owner of 150+ RDLC reports for a production Chit Fund ERP system — covering collections, ledger, receipts, compliance, and management summaries. Integrated with ASP.NET and optimized for sub-second rendering.</p>
+      <div class="proj-metric">150+ reports · sub-second render · 100% coverage</div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-num">04</div>
+      <div class="proj-title">BI Dashboard Suite — Power BI & SSRS</div>
+      <p class="proj-desc">Built executive-facing Power BI dashboards and SSRS paginated reports with parameterized drill-downs, KPI cards, and trend analysis. Improved management report turnaround by 35% and eliminated manual Excel aggregation.</p>
+      <div class="proj-metric">35% faster reporting · executive KPI visibility</div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-num">05</div>
+      <div class="proj-title">T-SQL Query Optimization Initiative</div>
+      <p class="proj-desc">Audited and rewrote 80+ legacy stored procedures; introduced covering indexes, eliminated N+1 query patterns, and added execution plan-guided rewrites. Average report query time reduced by 40%.</p>
+      <div class="proj-metric">80+ procs tuned · 40% faster queries · index strategy</div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-num">06</div>
+      <div class="proj-title">Data Validation & UAT Framework</div>
+      <p class="proj-desc">Built reusable SQL-based validation scripts comparing row counts, checksums, and referential integrity between source and target systems. Used across all migration phases and became the internal standard for UAT sign-off.</p>
+      <div class="proj-metric">100% UAT pass rate · reusable test harness</div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"><hr/></div>
+
+<!-- ── CONTACT ── -->
+<section id="contact" class="reveal">
+  <div class="section-label">Get in touch</div>
+  <h2 class="section-title">Contact <span>Me</span></h2>
+  <div class="contact-grid">
+    <div class="contact-box">
+      <p style="font-size:.8rem;color:var(--text-dim);line-height:1.8;margin-bottom:28px;">
+        Open to senior data engineering, migration, and BI roles — full-time or contract.
+        Reach out and let's talk about your data challenges.
+      </p>
+      <div class="contact-item">
+        <div class="c-icon">✉</div>
+        <div><div class="c-label">Email</div><div class="c-value"><a href="mailto:senthilcsk03@gmail.com">senthilcsk03@gmail.com</a></div></div>
+      </div>
+      <div class="contact-item">
+        <div class="c-icon">☎</div>
+        <div><div class="c-label">Phone</div><div class="c-value"><a href="tel:+919789295013">+91-9789295013</a></div></div>
+      </div>
+      <div class="contact-item">
+        <div class="c-icon">in</div>
+        <div><div class="c-label">LinkedIn</div><div class="c-value"><a href="https://linkedin.com" target="_blank">linkedin.com/in/senthilkumarc</a></div></div>
+      </div>
+      <div class="contact-item">
+        <div class="c-icon">&lt;/&gt;</div>
+        <div><div class="c-label">GitHub</div><div class="c-value"><a href="https://github.com" target="_blank">github.com/senthilkumarc</a></div></div>
+      </div>
+      <div class="contact-item">
+        <div class="c-icon">📍</div>
+        <div><div class="c-label">Location</div><div class="c-value">Chennai, Tamil Nadu, India</div></div>
+      </div>
+    </div>
+
+    <form class="contact-form" action="mailto:senthilcsk03@gmail.com" method="post" enctype="text/plain">
+      <div class="form-row">
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" required placeholder="Jane Smith"/>
+      </div>
+      <div class="form-row">
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" required placeholder="jane@company.com"/>
+      </div>
+      <div class="form-row">
+        <label for="subject">Subject</label>
+        <input id="subject" name="subject" type="text" placeholder="Data migration project / Job opportunity"/>
+      </div>
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required placeholder="Tell me about your data engineering challenge or opportunity..."></textarea>
+      </div>
+      <button type="submit" class="form-btn">Send message →</button>
+    </form>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-copy">© 2026 Senthil Kumar C — Senior Software Engineer</div>
+  <div class="footer-sig">Built with <span>▌</span> SQL · SSIS · Power BI</div>
+</footer>
+
+<script>
+// Scroll reveal
+const els=document.querySelectorAll('.reveal');
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
+},{threshold:.12});
+els.forEach(el=>io.observe(el));
+
+// Smooth nav
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    const t=document.getElementById(a.getAttribute('href').slice(1));
+    if(t)window.scrollTo({top:t.getBoundingClientRect().top+window.pageYOffset-60,behavior:'smooth'});
+  });
+});
+
+// Nav active state
+window.addEventListener('scroll',()=>{
+  const sections=document.querySelectorAll('section[id]');
+  let cur='';
+  sections.forEach(s=>{if(window.pageYOffset>=s.offsetTop-80)cur=s.id;});
+  document.querySelectorAll('.nav-links a').forEach(a=>{
+    a.style.color=a.getAttribute('href')==='#'+cur?'var(--accent)':'';
+  });
+},{passive:true});
+
+// Hamburger menu
+const hamburger=document.getElementById('hamburger');
+const drawer=document.getElementById('mobileDrawer');
+function closeDrawer(){
+  hamburger.classList.remove('open');
+  drawer.classList.remove('open');
+  hamburger.setAttribute('aria-expanded','false');
+}
+hamburger.addEventListener('click',()=>{
+  const isOpen=drawer.classList.contains('open');
+  if(isOpen){closeDrawer();}
+  else{
+    hamburger.classList.add('open');
+    drawer.classList.add('open');
+    hamburger.setAttribute('aria-expanded','true');
+  }
+});
+// Close drawer when a link is tapped
+drawer.querySelectorAll('a').forEach(a=>{
+  a.addEventListener('click',closeDrawer);
+});
+// Close on outside tap
+document.addEventListener('click',e=>{
+  if(!hamburger.contains(e.target)&&!drawer.contains(e.target))closeDrawer();
+});
+</script>
+</body>
+</html>
