@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Portfolio of Senthil Kumar C - Senior Software Engineer specializing in Data Migration, ETL, SQL optimization and BI reporting." />
+  <title>Senthil Kumar C | Portfolio</title>
+
+  <!-- Inline CSS: Combined modern theme, responsive, cards, animations -->
+  <style>
+    /* Reset & Base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      background: #f4f6f9;
+      color: #222;
+      line-height: 1.6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    /* Header / Hero */
+    header {
+      background: linear-gradient(135deg,#004080,#0066cc);
+      color: #fff;
+      padding: 56px 20px;
+      text-align: center;
+    }
+    header .container { max-width:1100px; margin:auto; }
+    header h1 { font-size:2.6rem; margin-bottom:8px; letter-spacing:0.5px; }
+    header p.lead { font-size:1.05rem; opacity:0.95; margin-bottom:14px; }
+    .contact-links { margin-top:12px; font-size:0.95rem; }
+    .contact-links a { color:#ffdd57; text-decoration:none; margin:0 8px; font-weight:600; }
+    .contact-links a:hover { text-decoration:underline; }
+
+    /* Menu toggle for mobile */
+    .menu-toggle { display:none; background:#004080; color:#fff; border:none; padding:10px 14px; border-radius:6px; cursor:pointer; font-size:1rem; margin:12px auto; }
+
+    /* Navigation */
+    nav {
+      background:#222;
+      padding:12px 10px;
+      text-align:center;
+      position:sticky;
+      top:0;
+      z-index:999;
+    }
+    nav a {
+      color:#fff; margin:0 16px; text-decoration:none; font-weight:600; display:inline-block;
+    }
+    nav a:hover { color:#ffcc00; }
+
+    /* Main sections */
+    main { max-width:1100px; margin:30px auto; padding:0 18px; }
+    section { padding:48px 0; }
+    section h2 {
+      font-size:1.6rem; color:#004080; margin-bottom:14px; display:inline-block; border-bottom:2px solid #004080; padding-bottom:6px;
+    }
+    section p.lead { margin-top:10px; color:#444; }
+
+    /* Cards & grids */
+    .grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap:22px;
+      margin-top:20px;
+    }
+    .card {
+      background:#fff; border-radius:10px; padding:18px; box-shadow:0 6px 18px rgba(0,0,0,0.08);
+      transition:transform .28s ease, box-shadow .28s ease;
+    }
+    .card:hover { transform:translateY(-6px); box-shadow:0 10px 26px rgba(0,0,0,0.12); }
+
+    /* Experience list style */
+    .experience-item { margin-bottom:14px; }
+    .experience-item strong { display:block; color:#004080; margin-bottom:6px; }
+
+    /* Project cards */
+    .project-card { text-align:center; padding-bottom:12px; }
+    .project-card img { width:100%; height:170px; object-fit:cover; border-radius:8px; margin-bottom:12px; background:#e9eef6; }
+    .project-card h3 { color:#004080; margin-bottom:8px; }
+    .project-card p { color:#444; font-size:0.95rem; margin-bottom:12px; }
+
+    /* Buttons */
+    .btn {
+      display:inline-block; padding:10px 18px; border-radius:8px; text-decoration:none; font-weight:700;
+      background:#004080; color:#fff; transition:background .22s ease;
+    }
+    .btn.secondary { background:#ffcc00; color:#004080; }
+    .btn:hover { background:#0066cc; color:#fff; }
+    .btn.secondary:hover { background:#ffd633; }
+
+    /* Resume download */
+    .resume-download { text-align:center; margin-top:18px; }
+
+    /* Contact form */
+    form { max-width:700px; margin:18px auto 0; background:#fff; padding:18px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.06); }
+    label { display:block; font-weight:600; margin-top:8px; color:#333; }
+    input[type="text"], input[type="email"], textarea {
+      width:100%; padding:10px; margin-top:6px; border:1px solid #d0d6dd; border-radius:6px; font-size:0.95rem;
+    }
+    textarea { resize:vertical; min-height:120px; }
+    form button { margin-top:12px; }
+
+    /* Footer */
+    footer { background:#004080; color:#fff; text-align:center; padding:18px 10px; margin-top:36px; }
+
+    /* Animations */
+    .fade-in, .slide-up { opacity:0; transform:translateY(20px); transition:opacity 0.9s ease, transform 0.9s ease; }
+    .slide-up { transform:translateY(40px); }
+    .visible { opacity:1; transform:translateY(0); }
+
+    /* Responsive adjustments */
+    @media (max-width: 900px) {
+      header h1 { font-size:2rem; }
+      header p.lead { font-size:1rem; }
+    }
+    @media (max-width: 768px) {
+      .menu-toggle { display:block; }
+      nav { display:none; }
+      nav.active { display:flex; flex-direction:column; gap:8px; padding:12px; }
+      nav a { margin:8px 0; }
+      .project-card img { height:160px; }
+      .card { padding:14px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header / Hero -->
+  <header>
+    <div class="container">
+      <h1>Senthil Kumar C</h1>
+      <p class="lead">Senior Software Engineer | Data Migration Specialist | Database Engineer</p>
+
+      <div class="contact-links" aria-label="Contact links">
+        <a href="mailto:senthilcsk03@gmail.com">senthilcsk03@gmail.com</a>
+        <a href="tel:+919789295013">+91-9789295013</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      </div>
+
+      <div class="resume-download">
+        <a class="btn secondary" href="Senthil_Kumar_C_Resume_Final.pdf" download>Download Resume</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu toggle -->
+  <button class="menu-toggle" aria-controls="navbar" aria-expanded="false" onclick="toggleMenu()">☰ Menu</button>
+
+  <!-- Navigation -->
+  <nav id="navbar" aria-label="Main navigation">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Main content -->
+  <main>
+    <!-- About -->
+    <section id="about" class="fade-in">
+      <h2>About Me</h2>
+      <p class="lead">Results-driven engineer with 3+ years of experience in data migration, ETL pipeline development, SQL optimization, and enterprise-scale reporting. Proven expertise in SQL Server, MySQL, SSIS, and SSMA with a track record of delivering zero-data-loss migrations and scalable solutions.</p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="slide-up">
+      <h2>Skills</h2>
+      <div class="grid">
+        <div class="card">
+          <h3 style="color:#004080; margin-bottom:8px;">ETL & Migration</h3>
+          <p>SSIS; SSMA; Data Pipelines; Data Mapping; MySQL → SQL Server migrations</p>
+        </div>
+        <div class="card">
+          <h3 style="color:#004080; margin-bottom:8px;">Databases & SQL</h3>
+          <p>SQL Server; MySQL; T-SQL; Stored Procedures; Indexing; Query Optimization</p>
+        </div>
+        <div class="card">
+          <h3 style="color:#004080; margin-bottom:8px;">BI & Reporting</h3>
+          <p>SSRS; SSAS; Power BI; RDLC Reports; KPI Dashboards</p>
+        </div>
+        <div class="card">
+          <h3 style="color:#004080; margin-bottom:8px;">Tools & Practices</h3>
+          <p>C#; .NET; ASP.NET; Visual Studio; Bitbucket; Jira; UAT; Data Validation</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="fade-in">
+      <h2>Experience</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="experience-item">
+            <strong>Senior Software Engineer — Novac Technology Solutions (Apr 2026 – Present)</strong>
+            <ul>
+              <li>Dedicated DB & reporting engineer for ChitCore ERP; authored 150+ RDLC reports.</li>
+              <li>Designed and optimized stored procedures, insert/update scripts; version-controlled via Bitbucket.</li>
+              <li>Led junior engineers; managed Jira tasks and UAT processes.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="experience-item">
+            <strong>Software Engineer — Novac Technology Solutions (Feb 2024 – Mar 2026)</strong>
+            <ul>
+              <li>Migrated 500+ tables and 10TB of production data (MySQL → SQL Server) using SSMA with zero data loss.</li>
+              <li>Built 15+ SSIS ETL pipelines; reduced manual processing by 60%.</li>
+              <li>Developed SSRS & Power BI dashboards; improved reporting efficiency by 35%.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="experience-item">
+            <strong>Software Engineer Trainee — Novac Technology Solutions (Feb 2023 – Feb 2024)</strong>
+            <ul>
+              <li>Trained in SQL Server, SSIS, T-SQL; contributed to migration and reporting tasks.</li>
+              <li>Assisted with data mapping, transformation logic, and validation testing.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects / Showcase -->
+    <section id="projects" class="slide-up">
+      <h2>Featured Projects</h2>
+      <p class="lead">A showcase of work in data migration, ETL automation, and business intelligence.</p>
+
+      <div class="project-grid grid" style="margin-top:18px;">
+        <div class="card project-card">
+          <img src="images/chitcore.png" alt="ChitCore ERP screenshot placeholder">
+          <h3>ChitCore ERP</h3>
+          <p>Designed 150+ RDLC reports; optimized SQL scripts for production ERP.</p>
+          <a class="btn" href="#projects">Learn More</a>
+        </div>
+
+        <div class="card project-card">
+          <img src="images/migration.png" alt="Enterprise migration screenshot placeholder">
+          <h3>Enterprise Migration</h3>
+          <p>Migrated 10TB of data and 500+ tables using SSMA with zero data loss.</p>
+          <a class="btn" href="#projects">Learn More</a>
+        </div>
+
+        <div class="card project-card">
+          <img src="images/etl.png" alt="ETL automation screenshot placeholder">
+          <h3>ETL Automation</h3>
+          <p>Built 15+ SSIS workflows to automate daily ETL and reduce manual effort by 60%.</p>
+          <a class="btn" href="#projects">Learn More</a>
+        </div>
+
+        <div class="card project-card">
+          <img src="images/bi.png" alt="BI reporting screenshot placeholder">
+          <h3>BI Reporting Suite</h3>
+          <p>SSRS & Power BI dashboards with KPIs and drill-downs for management reporting.</p>
+          <a class="btn" href="#projects">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="fade-in">
+      <h2>Contact</h2>
+      <p class="lead">Interested in collaborating or learning more? Reach out via email or use the form below.</p>
+
+      <form action="mailto:senthilcsk03@gmail.com" method="post" enctype="text/plain" aria-label="Contact form">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required placeholder="Your name">
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required placeholder="you@example.com">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required placeholder="Tell me about your project or opportunity"></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Senthil Kumar C — Senior Software Engineer</p>
+  </footer>
+
+  <!-- Inline JavaScript: menu toggle, scroll animations, smooth nav offset -->
+  <script>
+    // Mobile menu toggle
+    function toggleMenu() {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('active');
+      const expanded = nav.classList.contains('active');
+      document.querySelector('.menu-toggle').setAttribute('aria-expanded', expanded);
+    }
+
+    // Scroll-triggered animations
+    (function() {
+      const animated = document.querySelectorAll('.fade-in, .slide-up');
+      function onScroll() {
+        animated.forEach(el => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight - 80) el.classList.add('visible');
+        });
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('load', onScroll);
+      // initial call
+      onScroll();
+    })();
+
+    // Smooth nav with offset for sticky nav
+    (function() {
+      const navLinks = document.querySelectorAll('nav a');
+      navLinks.forEach(a => {
+        a.addEventListener('click', function(e) {
+          e.preventDefault();
+          const id = this.getAttribute('href').slice(1);
+          const el = document.getElementById(id);
+          if (!el) return;
+          const navHeight = document.querySelector('nav').offsetHeight || 60;
+          const top = el.getBoundingClientRect().top + window.pageYOffset - navHeight - 12;
+          window.scrollTo({ top, behavior: 'smooth' });
+          // close mobile nav if open
+          const nav = document.getElementById('navbar');
+          if (nav.classList.contains('active')) nav.classList.remove('active');
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
